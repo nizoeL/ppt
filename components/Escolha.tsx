@@ -8,33 +8,17 @@ export default function Escolha(params:any) {
         <Image style={styles.tinyLogo} source={{
           uri: params.img,
         }}></Image>
-        <Button title={nome(params.img)} onPress={()=>{clique(params.img)}}></Button>
+        <Button title={params.nome} onPress={()=>{clique(params.nome)}}></Button>
       </View>
     );
   }
 
-function clique(params:any) {
+function clique(nome:any) {
   sort = Math.floor(Math.random() * 3)
 
-  if (params == 'https://cdn-icons-png.flaticon.com/512/836/836972.png') {
-    alert("Você escolheu PEDRA")
-  }else if(params == 'https://cdn-icons-png.flaticon.com/512/35/35703.png'){
-    alert("Você escolheu PAPEL")
-  }else{
-    alert("Você escolheu TESOURA")
-  }
+  alert("Você escolheu " + nome)
   
-  jogo(sort, nome(params))
-}
-
-function nome(params:any) {
-  if (params == 'https://cdn-icons-png.flaticon.com/512/836/836972.png') {
-    return('PEDRA')
-  }else if(params == 'https://cdn-icons-png.flaticon.com/512/35/35703.png'){
-    return('PAPEL')
-  }else{
-    return('TESOURA')
-  }
+  jogo(sort, nome)
 }
 
 function jogo(cpu:any, jogador:any) {
@@ -47,7 +31,7 @@ function jogo(cpu:any, jogador:any) {
       alert('TESOURA x PEDRA \nresultado: CPU VENCEU!')
     }
 
-  }else if(cpu==1){
+  } else if(cpu==1) {
     if (jogador == 'PEDRA') {
       alert('PEDRA x PAPEL \nresultado: CPU VENCEU!')
     }else if (jogador == 'PAPEL'){
@@ -56,7 +40,7 @@ function jogo(cpu:any, jogador:any) {
       alert('TESOURA x PAPEL \nresultado: VOCÊ VENCEU!')
     }
 
-  }else{
+  } else {
     if (jogador == 'PEDRA') {
       alert('PEDRA x TESOURA \nresultado: VOCÊ VENCEU!')
     }else if (jogador == 'PAPEL'){

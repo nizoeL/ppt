@@ -7,8 +7,8 @@ export default function Escolha(params:any) {
       <View>
         <Image style={styles.tinyLogo} source={{
           uri: params.img,
-        }}></Image>
-        <Button title={params.nome} onPress={()=>{clique(params.nome)}}></Button>
+        }}/>
+        <Button title={params.nome} onPress={()=>{clique(params.nome)}}/>
       </View>
     );
   }
@@ -59,5 +59,6 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     borderWidth: 3,
     borderColor: "gray",
+    backgroundColor: '#fff',
   }
 })

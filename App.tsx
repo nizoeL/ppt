@@ -1,9 +1,14 @@
 import Escolha from './components/Escolha';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 export default function App() {
   return (
-    <Escolha img={'https://cdn-icons-png.flaticon.com/512/836/836972.png'}/>
+    <View style={styles.container}>
+      <Escolha img={'https://cdn-icons-png.flaticon.com/512/836/836972.png'}/>
+      <Escolha img={'https://cdn-icons-png.flaticon.com/512/35/35703.png'}/>
+      <Escolha img={'https://cdn-icons-png.flaticon.com/512/541/541957.png'}/>
+    </View>
+    
   );
 }
 
